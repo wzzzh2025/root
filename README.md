@@ -5,7 +5,8 @@
 
 2.接着来到更多设置->开发者选项，找到usb调试和usb安装 并打开
 
-<img width="1406" height="112" alt="image" src="https://github.com/user-attachments/assets/78dd0109-c53b-4889-88da-3c6330454953" />
+<img width="1280" height="1993" alt="image" src="https://github.com/user-attachments/assets/7e578ebf-2367-48d9-98e6-a8d5dac8931e" />
+
 
 ### 绑定
 
@@ -21,7 +22,8 @@
 adb install setting.apk  
 ```
 
-<img width="1280" height="1993" alt="image" src="https://github.com/user-attachments/assets/06c0431f-20b7-4cc8-afc9-d8255e4a0520" />
+<img width="1406" height="112" alt="image" src="https://github.com/user-attachments/assets/d9cf0896-636c-4873-bdd4-ec249d30316a" />
+
 
 
 2.接着打开`bypass.cmd`（`windows`环境），会跳转到绑定账号的界面，点击绑定即可，这里手机中会提醒让去小米社区升级什么的，不用管，只需要看`bypass.cmd`打开的`cmd`，里面只要提示绑定成功了就行
