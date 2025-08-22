@@ -7,6 +7,8 @@
 
 <img width="1280" height="1993" alt="image" src="https://github.com/user-attachments/assets/7e578ebf-2367-48d9-98e6-a8d5dac8931e" />
 
+3.参考下面这个视频链接升级电脑usb驱动，否则fastbooot可能无法使用
+https://www.bilibili.com/video/BV1do4y1y7n1/?spm_id_from=333.337.search-card.all.click&vd_source=21398319e9adc0970ef959d6b95f353d
 
 ### 绑定
 
