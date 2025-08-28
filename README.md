@@ -107,10 +107,12 @@ adb pull /sdcard/download/mag....img
 
 3.将后面所有要用到的工具都先预装一下
 注：这里的路径需要自行修改
+
 **magisk**
 ```bash
 adb install magisk.apk
 ```
+
 **losped**
 ```bash
 adb push losped.zip  /sdcard
@@ -122,6 +124,7 @@ adb push losped.zip  /sdcard
 ```bash
 adb install 摸鱼社区.apk
 ```
+
 **小红书**
 ```bash
 adb install 小红书.apk
