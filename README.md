@@ -76,23 +76,17 @@ adb reboot bootloader
 <img width="1230" height="840" alt="image" src="https://github.com/user-attachments/assets/bc8d18d6-0082-4e68-9e2c-55dbec7a4991" />
 
 
-解锁这一步相当于给系统刷机了，所以小米账号等等....都需要重新去登录
+解锁这一步相当于刷机了，所以小米账号等等....都需要重新去登录
 
 包括usb调试也需要重新去打开（参考开始前的准备）
 
 ### `Root`
 
-如果已经有修补过的镜像了（我们已经有了，在boot文件夹中），那么2、3这三部就不需要了，这里澎湃1.10刷1.06的镜像也是没有任何问题的、甚至说刷miui的镜像都没问题（所以刷错了也没关系，真不行了就再刷一遍正常的回去就行了），所以2 、3步是可以跳过的
+如果已经有修补过的镜像了（我们已经有了，在boot文件夹中），那么1、2这两部就不需要了，这里澎湃1.10刷1.06的镜像也是没有任何问题的、甚至说刷miui的镜像都没问题（所以刷错了也没关系，真不行了就再刷一遍正常的回去就行了），所以2 、3步是可以跳过的
 
+**============================1、2步请直接跳过==========================================================================================**
 
-
-1.将`root apk magisk` 安装到手机中去
-
-```bash
-adb install magisk.apk
-```
-
-2.到 https://xiaomirom.com/rom/redmi-pad-se-xun-china-fastboot-recovery-rom/ 这个网站寻找对应`os`版本的镜像包，下载解压是一个文件夹
+1.到 https://xiaomirom.com/rom/redmi-pad-se-xun-china-fastboot-recovery-rom/ 这个网站寻找对应`os`版本的镜像包，下载解压是一个文件夹
 
 `->images->init_boot.img`
 
@@ -102,15 +96,36 @@ adb install magisk.apk
 adb push init_boot.img /sdcard
 ```
 
-3.在`magisk` 中修补之前的`init_boot.img` 镜像
+2.在`magisk` 中修补之前的`init_boot.img` 镜像
 
 点击`magisk` 附近的安装，一步一步跟进去即可，最后选择之前的`init_boot.img`，开始修补，会产生一个修补后的镜像，大概是在`/sdcard/download`这个路径下，先`pull`到电脑中去
 
 ```bash
 adb pull /sdcard/download/mag....img
 ```
+**============================1、2步请直接跳过==========================================================================================**
 
+3.将后面所有要用到的工具都先预装一下
 
+**magisk**
+```bash
+adb install magisk.apk
+```
+**losped**
+```bash
+adb push losped.zip  /sdcard
+```
+
+<img width="1680" height="63" alt="image" src="https://github.com/user-attachments/assets/7caac17d-387e-4271-bf03-3a50e41e23f8" />
+
+**监听工具**
+```bash
+adb install 摸鱼社区.apk
+```
+**小红书**
+```bash
+adb install 小红书.apk
+```
 
 4.开始`root`  **(如果已经有修补过了的镜像的话前2、3部可以省略)**
 
@@ -139,11 +154,7 @@ fastboot reboot
 
 1.先把`losped` push到手机中去
 
-```bash
-adb push losped.zip  /sdcard
-```
-
-<img width="1680" height="63" alt="image" src="https://github.com/user-attachments/assets/7caac17d-387e-4271-bf03-3a50e41e23f8" />
+这一步之前已经做过了，这里直接跳过
 
 
 2.进入到`magisk`中，如果是直接刷的镜像的话，可能会有下面的提示，点击确定即可
@@ -180,19 +191,16 @@ adb push losped.zip  /sdcard
 <img width="795" height="1272" alt="image" src="https://github.com/user-attachments/assets/00f378a2-efd9-40e4-85f3-4ed69ece0088" />
 
 
-### 安装监听工具
+### 激活监听工具
 
-```bash
-adb install 摸鱼社区.apk
-```
-
-安装进来之后顶部大概率就会弹出来一个框，说模块未激活，点进去激活模块，给小红书权限即可
+进入到losped中给打开监听工具以及小红书
 
 <img width="795" height="1272" alt="image" src="https://github.com/user-attachments/assets/d9490f2f-8bfe-4264-8e47-c98dc1d2b78b" />
 
 
-### 给工具`root`权限
+### 给`root`权限
 
-打开小红书登录账号后用其他设备往账号中发送一条私信，当设备第一次接收到信息时会弹出来一个框让给小红书`root`权限(默认10秒后自动拒绝)，这里允许一下。
+打开小红书会弹出来一个框让给小红书`root`权限(默认10秒后自动拒绝)，这里允许一下。
+同样的，打开监听工具也会有弹窗，允许即可
 
 如果没来的及给的话，打开`magisk` ，点击底部第二个超级用户，把小红书的权限打开就可以了
